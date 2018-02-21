@@ -3,7 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+html {
+  font-size: 17px;
+}
+body {
+  background-color: black;
+}
 $columns: 12;
 $baseColumnWidth: 100%/$columns;
 
@@ -11,6 +16,7 @@ $baseColumnWidth: 100%/$columns;
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
+  background-color: #ffb3b3;
 
   .row {
     &:before, &:after {
