@@ -2,21 +2,40 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #3498db;
 }
 html {
   font-size: 17px;
 }
-body {
-  background-color: black;
+header {
+  color: white;
 }
+body {
+  background-color: white;
+}
+footer {
+  color: white;
+}
+.left-side {
+  color: black;
+  margin-top: 25px;
+}
+.mainFlex {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+
 $columns: 12;
 $baseColumnWidth: 100%/$columns;
+
 
 .container {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
-  background-color: #ffb3b3;
+
 
   .row {
     &:before, &:after {
@@ -25,7 +44,7 @@ $baseColumnWidth: 100%/$columns;
       clear: both;
     }
 
-    [class*='col-'] {  // styluję wszystkie klasy, które rozpoczynają się od col-
+    [class*='col-'] {  // wszystkie klasy, które rozpoczynają się od col-
       float: left;
       width: $baseColumnWidth;
       min-height: 1px;
