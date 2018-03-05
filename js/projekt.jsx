@@ -16,7 +16,7 @@ class Header extends React.Component {
             <div className="row ">
 
                 <div className="col-12 ">
-                    <ul className='mainFlex'>  
+                    <ul className='mainFlex'>
                         <li>LOGO</li>
                         <li>Kamery</li>
                         <li>Noclegi</li>
