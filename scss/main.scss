@@ -1,60 +1,18 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  color: #3498db;
-}
-html {
-  font-size: 17px;
-}
-header {
-  color: white;
-}
-body {
-  background-color: white;
-}
-footer {
-  color: white;
-}
-.left-side {
-  color: black;
-  margin-top: 25px;
-}
-.mainFlex {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-}
 
 
-$columns: 12;
-$baseColumnWidth: 100%/$columns;
+
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/render";
+@import "partials/leftPanel";
+
+@import "modules/header";
+@import "modules/body";
+@import "modules/footer";
+
+@import "partials/table";
 
 
-.container {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
 
 
-  .row {
-    &:before, &:after {
-      content: "";
-      display: block;
-      clear: both;
-    }
 
-    [class*='col-'] {  // wszystkie klasy, które rozpoczynają się od col-
-      float: left;
-      width: $baseColumnWidth;
-      min-height: 1px;
-      padding: 10px;  // zeby bylo ladnie
-    }
-
-    @for $i from 1 through $columns {
-      .col-#{$i}{  // trzeba interpolację, żeby wstawiały się kolejne liczby (nr kolumn)
-        width: $baseColumnWidth * $i;
-      }
-    }
-  }  // eo row
-}   // eo container

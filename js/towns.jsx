@@ -1,10 +1,18 @@
 import React from "react";
 // Collection of the currort cities in Poland
+
+
+
+
 class Main extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null
         }
     }
 
@@ -13,12 +21,39 @@ class Main extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity
                 })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/large.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                    <tr>
+                        <th> Temperatura </th>
+                        <th> Wiatr </th>
+                        <th> Zachmurzenie </th>
+                        <th> Wilgotność </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                        </td>
+                        <td>{this.state.wind} m/s</td>
+                        <td>{this.state.clouds}%</td>
+                        <td>{this.state.humidity}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     }
 }
 
@@ -27,7 +62,11 @@ class MainBialka extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null
         }
     }
 
@@ -36,12 +75,40 @@ class MainBialka extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity
+
                 })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/bialka.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                        <tr>
+                            <th> Temperatura </th>
+                            <th> Wiatr </th>
+                            <th> Zachmurzenie </th>
+                            <th> Wilgotność </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                            </td>
+                            <td>{this.state.wind} m/s</td>
+                            <td>{this.state.clouds}%</td>
+                            <td>{this.state.humidity}%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
     }
 }
 
@@ -50,8 +117,11 @@ class MainKrynica extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
-        }
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null        }
     }
 
     componentDidMount (){
@@ -59,12 +129,38 @@ class MainKrynica extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
-                })
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity                })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/krycha.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                    <tr>
+                        <th> Temperatura </th>
+                        <th> Wiatr </th>
+                        <th> Zachmurzenie </th>
+                        <th> Wilgotność </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                        </td>
+                        <td>{this.state.wind} m/s</td>
+                        <td>{this.state.clouds}%</td>
+                        <td>{this.state.humidity}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     }
 }
 
@@ -72,8 +168,11 @@ class MainCzarna extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
-        }
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null        }
     }
 
     componentDidMount (){
@@ -81,20 +180,49 @@ class MainCzarna extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
-                })
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity                })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/czar.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                    <tr>
+                        <th> Temperatura </th>
+                        <th> Wiatr </th>
+                        <th> Zachmurzenie </th>
+                        <th> Wilgotność </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                        </td>
+                        <td>{this.state.wind} m/s</td>
+                        <td>{this.state.clouds}%</td>
+                        <td>{this.state.humidity}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     }
 }
 class MainWisla extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
-        }
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null        }
     }
 
     componentDidMount (){
@@ -102,20 +230,49 @@ class MainWisla extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
-                })
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity                })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/wisla.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                    <tr>
+                        <th> Temperatura </th>
+                        <th> Wiatr </th>
+                        <th> Zachmurzenie </th>
+                        <th> Wilgotność </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                        </td>
+                        <td>{this.state.wind} m/s</td>
+                        <td>{this.state.clouds}%</td>
+                        <td>{this.state.humidity}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     }
 }
 class MainKorbielow extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: null
-        }
+            degreeMax: null,
+            degreeMin: null,
+            wind: null,
+            clouds: null,
+            humidity: null        }
     }
 
     componentDidMount (){
@@ -123,12 +280,38 @@ class MainKorbielow extends React.Component {
             .then(data=> data.json())
             .then(data=> {
                 this.setState ({
-                    weather: data.list[0].main.temp
-                })
+                    degreeMax: data.list[0].main.temp_max,
+                    degreeMin: data.list[0].main.temp_min,
+                    wind: data.list[0].wind.speed,
+                    clouds: data.list[0].clouds.all,
+                    humidity: data.list[0].main.humidity                })
             })
     }
     render (){
-        return <div>{(this.state.weather - 273.15).toFixed(1)}</div>
+        return <div>
+            <div><img src='../images/korbielow.jpg'/></div>
+            <div>
+                <table className='conditions'>
+                    <thead>
+                    <tr>
+                        <th> Temperatura </th>
+                        <th> Wiatr </th>
+                        <th> Zachmurzenie </th>
+                        <th> Wilgotność </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{(this.state.degreeMax - 273.15).toFixed(1)} - {(this.state.degreeMin - 273.15).toFixed(1)}
+                        </td>
+                        <td>{this.state.wind} m/s</td>
+                        <td>{this.state.clouds}%</td>
+                        <td>{this.state.humidity}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     }
 }
 
@@ -152,9 +335,6 @@ const testNames = [{
 },{
     title: "Korbielów",
     id: 4
-},{
-    title: "Val Thorens",
-    id: 11
 }]
 
 
