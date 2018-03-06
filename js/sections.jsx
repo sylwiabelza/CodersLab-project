@@ -20,7 +20,7 @@ class SectionLeft extends React.Component {
 
                             return <div className='left-side' key={i} onClick={()=>{
                                 this.handleClick(elem.id)
-                            }}> {elem.title} </div>
+                            }}><p> {elem.title}</p> </div>
                         })}
                     </div>
                 </div>

@@ -31,7 +31,7 @@ class Main extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/large.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size' src='../images/large.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
@@ -86,7 +86,7 @@ class MainBialka extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/bialka.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size' src='../images/bialka.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
@@ -138,7 +138,7 @@ class MainKrynica extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/krycha.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size'  src='../images/krycha.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
@@ -189,7 +189,7 @@ class MainCzarna extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/czar.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size'  src='../images/czar.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
@@ -239,7 +239,7 @@ class MainWisla extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/wisla.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size'  src='../images/wisla.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
@@ -289,7 +289,7 @@ class MainKorbielow extends React.Component {
     }
     render (){
         return <div>
-            <div><img src='../images/korbielow.jpg'/></div>
+            <div style={{height: '450px'}}><img className='size'  src='../images/korbielow.jpg'/></div>
             <div>
                 <table className='conditions'>
                     <thead>
