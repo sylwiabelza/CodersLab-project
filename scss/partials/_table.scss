@@ -3,18 +3,23 @@
 }
 
 
-.conditions th {
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  font-size: 90%;
-  border-bottom: 3px solid #3498db;
-  border-top: 1px solid #3498db;
-  text-align: center;
-  color: black;
-}
-.conditions td{
-  text-align: center;
-  background-color: #e6e6e6;
-  border-spacing: 5px;
-  min-height: 20px;
-}
+.conditions{
+
+  th {
+    text-transform: uppercase;
+    padding: 0 1.5em;
+    letter-spacing: 0.2em;
+    font-size: 90%;
+    border-bottom: 3px solid #3498db;
+    border-top: 1px solid #3498db;
+    text-align: center;
+    color: black;
+    }
+  td {
+    text-align: center;
+    background-color: #e6e6e6;
+    border-spacing: 5px;
+    min-height: 20px;
+    color: black;
+  }
+  }
