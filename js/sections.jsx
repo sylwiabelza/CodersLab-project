@@ -20,7 +20,7 @@ class SectionLeft extends React.Component {
                     <div className="col-12">
                         {this.props.arrayleft.map((elem,i)=>{
 
-                            return <div style={{borderRadius: '20%'}} className='left-side' key={i} onClick={()=>{
+                            return <div className='left-side' key={i} onClick={()=>{
                                 this.handleClick(elem.id)
                             }}><p> {elem.title}</p> </div>
                         })}

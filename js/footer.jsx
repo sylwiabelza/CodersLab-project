@@ -12,8 +12,7 @@ class Footer extends React.Component {
 
                         <div className="footer">
 
-                            <ul className='mainFlex'>
-                                <li><div className='logo'></div></li>
+                            <ul className='mainFlex footerContent'>
                                 <li>Polityka prywatności</li>
                                 <li>Mapa serwisu</li>
                                 <li>Warunki korzystania</li>
@@ -21,6 +20,11 @@ class Footer extends React.Component {
 
 
                             </ul>
+                            <div className='copyRight'>
+                            <span>Copyright &copy; 1900-2100 W - wszelkie prawa zastrzeżone. Email:
+                            <a href='mailto: w.nowacky@gmail.com'> Wojciech Nowacki </a>
+                            </span>
+                            </div>
 
                         </div>
 

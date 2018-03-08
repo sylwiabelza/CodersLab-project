@@ -25,11 +25,14 @@ class Main extends React.Component {
                     degreeMin: data.list[0].main.temp_min,
                     wind: data.list[0].wind.speed,
                     clouds: data.list[0].clouds.all,
-                    humidity: data.list[0].main.humidity
+                    humidity: data.list[0].weather.main
                 })
-            })
+            }).catch(err =>{
+                console.log("Conntection Error :", err)
+        })
     }
     render (){
+
         return <div>
             <div style={{height: '450px'}}><img className='size' src='../images/large.jpg'/></div>
             <div>
@@ -82,7 +85,9 @@ class MainBialka extends React.Component {
                     humidity: data.list[0].main.humidity
 
                 })
-            })
+            }).catch(err =>{
+            console.log("Conntection Error :", err)
+        })
     }
     render (){
         return <div>
@@ -134,7 +139,9 @@ class MainKrynica extends React.Component {
                     wind: data.list[0].wind.speed,
                     clouds: data.list[0].clouds.all,
                     humidity: data.list[0].main.humidity                })
-            })
+            }).catch(err =>{
+            console.log("Conntection Error :", err)
+        })
     }
     render (){
         return <div>
@@ -185,7 +192,9 @@ class MainCzarna extends React.Component {
                     wind: data.list[0].wind.speed,
                     clouds: data.list[0].clouds.all,
                     humidity: data.list[0].main.humidity                })
-            })
+            }).catch(err =>{
+            console.log("Conntection Error :", err)
+        })
     }
     render (){
         return <div>
@@ -235,7 +244,9 @@ class MainWisla extends React.Component {
                     wind: data.list[0].wind.speed,
                     clouds: data.list[0].clouds.all,
                     humidity: data.list[0].main.humidity                })
-            })
+            }).catch(err =>{
+            console.log("Conntection Error :", err)
+        })
     }
     render (){
         return <div>
@@ -285,7 +296,9 @@ class MainKorbielow extends React.Component {
                     wind: data.list[0].wind.speed,
                     clouds: data.list[0].clouds.all,
                     humidity: data.list[0].main.humidity                })
-            })
+            }).catch(err =>{
+            console.log("Conntection Error :", err)
+        })
     }
     render (){
         return <div>

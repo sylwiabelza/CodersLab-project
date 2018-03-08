@@ -55,7 +55,7 @@ class Header extends React.Component {
 
                             </div>
                         </div></li>
-                        <li>Kontakt</li>
+                        <li><span>Kontakt</span></li>
 
                     </ul>
                 </nav>

@@ -1,8 +1,22 @@
 footer {
+  margin-top: 5em;
   color: white;
   padding-top: 1.5em;
+  background-color: black;
+  .copyRight{
+    text-align: center;
+    margin-top: 0.5em;
+    a {
+      text-decoration: none;
+    }
+  }
 }
+.footerContent {
+  li:hover{
+    cursor: pointer;
+  }
 
+}
 .mainFlex {
 
   display: flex;
@@ -11,7 +25,8 @@ footer {
   align-items: center;
 
   li {
-    color: black;
+    color: white;
 
   }
+
 }

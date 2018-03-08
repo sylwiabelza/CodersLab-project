@@ -1,14 +1,20 @@
 .left-side {
   color: black;
   margin-top: 25px;
+  width: 15em;
   min-height: 40px;
   -webkit-box-shadow: inset 0px 0px 33px 7px rgba(35,209,209,0.52);
   -moz-box-shadow: inset 0px 0px 33px 7px rgba(35,209,209,0.52);
   box-shadow: inset 0px 0px 33px 7px rgba(35,209,209,0.52);
+  transition: 2s;
+}
+.left-side:hover{
+  background-color: #4a90e2;
 }
 
 .left-side p {
   text-align: center;
   padding-top: 10px;
   color: black;
+  cursor: pointer;
 }
